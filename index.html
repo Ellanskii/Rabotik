@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <article>
+    <h1>Повар</h1>
+    <button type="button">Откликнуться</button>
+  </article>
+
+  <script>
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', () => document.dispatchEvent(new CustomEvent('rabota', { detail: { 
+      id: 'VACANCY_CLICK',
+      timestamp: Date.now()
+    } })))
+  </script>
+
+  <script async defer type="module" src="/main.js"></script>
+  <script async defer type="module" src="/scenarios/nightmare.js"></script>
+</body>
+
+</html>
